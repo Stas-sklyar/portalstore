@@ -1,0 +1,57 @@
+<div class="form-site__top">
+    <div class="form-site__title">בחירת אופן המסירה</div>
+    <div class="form-site__icon">
+        <svg class="icon ic-delivery-check" width="23" height="16">
+            <use xlink:href="#ic-delivery-check"></use>
+        </svg>
+    </div>
+</div>
+
+<div class="form-site__text">*שימו לב: הזמנות שיתקבלו לאחר השעה 18:00 יסופקו ביום שלמחרת, או במועד אחר
+    שתציינו בהזמנה. ביום שישי וערב חג הזמנות יתקבלו עד השעה 13.00</div>
+
+<div class="form-site__item">
+    <div class="input-date">
+        <div class="input-date__icon">
+            <svg class="icon ic-date" width="24" height="22">
+                <use xlink:href="#ic-date"></use>
+            </svg>
+        </div>
+        <div class="input-date__label">בחר תאריך</div>
+        <div class="input-date__field">
+            <input type="text" placeholder="  -  -  ">
+        </div>
+        <div class="input-date-btn">
+            <div class="input-date-btn__icon">
+                <svg class="icon ic-calendar" width="15" height="15">
+                    <use xlink:href="#ic-calendar"></use>
+                </svg>
+            </div>
+            <app-date-popup style="display: none;"></app-date-popup>
+        </div>
+    </div>
+</div>
+<div class="form-site__item">
+    <div class="form-city">
+        <div class="form-city__icon">
+            <svg class="icon ic-marker" width="14" height="22">
+                <use xlink:href="#ic-marker"></use>
+            </svg>
+        </div>
+        <div class="form-city__label">העיר שלך</div>
+        <div class="choose">
+            <div class="choose__def">םילשורי</div>
+            <app-select-city-popup style="display: none;"></app-select-city-popup>
+        </div>
+        <div class="form-city__note">עלות משלוח<span class="form-city__price">₪15</span></div>
+    </div>
+</div>
+<div class="form-site__item form-site__item_col">
+    <div class="form-site__label"><span class="form-site__l-icon">
+            <svg class="icon ic-pencil" width="20" height="20">
+                <use xlink:href="#ic-pencil"></use>
+            </svg></span>בקשות מיוחדות:</div>
+    <div class="form-site__field">
+        <textarea></textarea>
+    </div>
+</div>

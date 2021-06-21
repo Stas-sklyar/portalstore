@@ -1,0 +1,263 @@
+
+<main>
+  <div class="breadcrumb-wrap d-none d-md-block">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <ul class="breadcrumb">
+            <li class="breadcrumb__item"><a class="breadcrumb__link" href="/">
+              <svg class="icon ic-home" width="16" height="14">
+                <use xlink:href="#ic-home"></use>
+              </svg>בית</a></li>
+            <li class="breadcrumb__item"><a class="breadcrumb__link" href="#">קטגוריות</a></li>
+            <li class="breadcrumb__item"><a class="breadcrumb__link" href="#">זרי פרחים</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="container d-none d-md-block">
+    <div class="row">
+      <div class="col-12">
+        <div class="about">
+          <div class="about__content">
+            <div class="about__title">משלוח פרחים</div>
+            <div class="about__text">מחפשים משלוחי פרחים ישירות מחנות הקרובה ליעד ?<br>משלוחי פרחים אצלנו מתבצעים ישירות על ידי חנויות מכל רחבי הארץ שנבחרו בקפידה ונבדקו על פי חוות דעת ומדורגים על ידי הגולשים.<br>לנוחיותכם פתחנו מנוע ייחודי להשוואה שמאפשר לעשות סקר שוק ולקבל הצעה הטובה ביותר מחנות הקרובה ליעד.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="catalog">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="catalog-action justify-content-end">
+            <div class="view">
+              <div class="view__item">
+                <svg class="icon ic-view-line" width="30" height="22">
+                  <use xlink:href="#ic-view-line"></use>
+                </svg>
+              </div>
+              <div class="view__item">
+                <svg class="icon ic-view-square" width="30" height="22">
+                  <use xlink:href="#ic-view-square"></use>
+                </svg>
+              </div>
+              <div class="view__item active">
+                <svg class="icon ic-view-tile" width="30" height="22">
+                  <use xlink:href="#ic-view-tile"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="catalog-list catalog-list_col-5">
+            <div class="goods-item goods-item_small" *ngFor="let i of [0,1,2,3,4,5,6,7,8,9,10,11]">
+              <app-catalog-list-item-v1></app-catalog-list-item-v1>
+            </div>
+          </div>
+          <div class="pager-wrap">
+            <div class="container">
+              <div class="row">
+                <div class="col-12">
+                  <div class="pager"><a class="pager__arr" href="#"><</a><a class="pager__item" href="#">1</a><a class="pager__item" href="#">2</a><a class="pager__item current" href="#">3</a><span class="pager__more">...</span><a class="pager__item" href="#">8</a><a class="pager__item" href="#">9</a><a class="pager__arr" href="#">></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="swiper-container top-slider js-top-slider">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="top-slider-item">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="top-slider-item__slide">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="top-slider-item__img-wrap">
+                        <div class="top-slider-item__img"><img src="/assets/img/flower-big.png" alt="">
+                          <div class="top-slider-item__prices">
+                            <div class="top-slider-item__old-price">₪160</div>
+                            <div class="top-slider-item__cur-price">₪135</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 order-first order-lg-1">
+                      <div class="top-slider-item__content">
+                        <div class="top-slider-item__title">כותרת מבצע מבצע</div>
+                        <div class="top-slider-item__text">מיזמים ליצירתה שער מה והוא נבחרים ארכיאולוגיה.  מאמרשיחהצפה עוד ב, רבה לטיפול לעברית על, פיסול בדפים סדר מה. מה החלה נפלו כדי, גם עמוד סרבול הקהילה כדי, בה אחד ניווט מיוחדים.</div><a class="btn" href="#">למד עוד</a>
+                        <div class="swiper-pagination"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="top-slider-item">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="top-slider-item__slide">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="top-slider-item__img-wrap">
+                        <div class="top-slider-item__img"><img src="/assets/img/flower-big.png" alt="">
+                          <div class="top-slider-item__prices">
+                            <div class="top-slider-item__old-price">₪100</div>
+                            <div class="top-slider-item__cur-price">₪85</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 order-first order-lg-1">
+                      <div class="top-slider-item__content">
+                        <div class="top-slider-item__title">כותרת מבצע מבצע2</div>
+                        <div class="top-slider-item__text">מיזמים ליצירתה שער מה והוא נבחרים ארכיאולוגיה.  מאמרשיחהצפה עוד ב, רבה לטיפול לעברית על, פיסול בדפים סדר מה. מה החלה נפלו כדי, גם עמוד סרבול הקהילה כדי.</div><a class="btn" href="#">למד עוד</a>
+                        <div class="swiper-pagination"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="top-slider-item">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="top-slider-item__slide">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="top-slider-item__img-wrap">
+                        <div class="top-slider-item__img"><img src="/assets/img/flower-big.png" alt="">
+                          <div class="top-slider-item__prices">
+                            <div class="top-slider-item__old-price">₪500</div>
+                            <div class="top-slider-item__cur-price">₪435</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 order-first order-lg-1">
+                      <div class="top-slider-item__content">
+                        <div class="top-slider-item__title">3כותרת מבצע מבצע</div>
+                        <div class="top-slider-item__text">מיזמים ליצירתה שער מה והוא נבחרים ארכיאולוגיה.  מאמרשיחהצפה עוד.</div><a class="btn" href="#">למד עוד</a>
+                        <div class="swiper-pagination"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="top-slider-item">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="top-slider-item__slide">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="top-slider-item__img-wrap">
+                        <div class="top-slider-item__img"><img src="/assets/img/flower-big.png" alt="">
+                          <div class="top-slider-item__prices">
+                            <div class="top-slider-item__old-price">₪160</div>
+                            <div class="top-slider-item__cur-price">₪135</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 order-first order-lg-1">
+                      <div class="top-slider-item__content">
+                        <div class="top-slider-item__title">4כותרת מבצע מבצע</div>
+                        <div class="top-slider-item__text">מאמרשיחהצפה עוד ב, רבה לטיפול לעברית על, פיסול בדפים סדר מה. מה החלה נפלו כדי, גם עמוד סרבול הקהילה כדי, בה אחד ניווט מיוחדים.</div><a class="btn" href="#">למד עוד</a>
+                        <div class="swiper-pagination"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="top-slider-item">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="top-slider-item__slide">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="top-slider-item__img-wrap">
+                        <div class="top-slider-item__img"><img src="/assets/img/flower-big.png" alt="">
+                          <div class="top-slider-item__prices">
+                            <div class="top-slider-item__old-price">₪1500</div>
+                            <div class="top-slider-item__cur-price">₪1350</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 order-first order-lg-1">
+                      <div class="top-slider-item__content">
+                        <div class="top-slider-item__title">5כותרת מבצע מבצע</div>
+                        <div class="top-slider-item__text">מיזמים ליצירתה שער מה והוא נבחרים ארכיאולוגיה.  מאמרשיחהצפה עוד ב, רבה לטיפול לעברית על, פיסול בדפים סדר מה. מה החלה נפלו כדי, גם עמוד סרבול הקהילה כדי, בה אחד ניווט מיוחדים.</div><a class="btn" href="#">למד עוד</a>
+                        <div class="swiper-pagination"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-button-prev">
+      <svg class="icon ic-arrow-left" width="11" height="14">
+        <use xlink:href="#ic-arrow-left"></use>
+      </svg>
+    </div>
+    <div class="swiper-button-next">
+      <svg class="icon ic-arrow-right" width="11" height="14">
+        <use xlink:href="#ic-arrow-right"></use>
+      </svg>
+    </div>
+  </section>
+  <section class="unwrap-wrap">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="unwrap opened">
+            <div class="unwrap__head">
+              <div class="unwrap__arr">
+                <svg class="icon ic-arrow-down" width="27" height="16">
+                  <use xlink:href="#ic-arrow-down"></use>
+                </svg>
+              </div>
+              <div class="unwrap__title">כותרת המאמר</div>
+            </div>
+            <div class="unwrap__content">
+              <p>בארגז רומנית תנך מה. או היא פנאי לחיבור ואלקטרוניקה. הגרפים מרצועת רב־לשוני היא דת, צעד ליום לויקיפדים על. זאת דת ניווט אחרים קלאסיים, אל רבה קסאם הנדסת לעריכה. רבה דת שונה המקושרים היסטוריה, אם כדור אקטואליה אחר. <br>כתב אספרנטו למתחילים פילוסופיה אל. קישורים פסיכולוגיה חפש של. סרבול פיסיקה מה שכל, החלה רפואה שכל מה. גם אתה מתוך מונחים נבחרים, עזה והוא רוסית בשפות ב. או שכל החלה אינו, שנתי טיפול ואמנות מדע אם, והנדסה שימושיים אקטואליה מלא ב. יכול המדינה ארכיאולוגיה של כדי.<br>תרבות עסקים בלשנות בה עוד.</p>
+              <p>היא ספרדית ואלקטרוניקה את, בדף ברוכים קצרמרים טכנולוגיה אל. לתרום הבקשה סטטיסטיקה אם בקר. חפש דת עמוד מושגי, על דפים אדריכלות סדר. תורת ראשי על זכר. בדף דת לתרום מיתולוגיה מאמרשיחהצפה, על זאת כלכלה טכנולוגיה, צילום לרפובליקה העריכהגירסאות מלא על<br>היא על פנאי מיוחדים היסטוריה, או ויש וקשקש לעברית, מה קצרמרים ממונרכיה שכל. אל מדע לחבר אווירונאוטיקה. בדף תוכל מוסיקה טכניים או, היום משפטית האטמוספירה גם שכל. את תוכל שימושיים ויש, אל אתה לשון בגרסה פולנית, של בקרבת הקהילה צ'ט.<br>אל אחר והוא רומנית אווירונאוטיקה, חפש לערך הבהרה ביולוגיה את. לחבר הבהרה אגרונומיה ב שתי. או ויקימדיה אווירונאוטיקה ארץ, מיותר בידור החופשית כתב על, תנך טבלאות שינויים על. ויש ב עיצוב תיאטרון הנאמנים. צעד אירועים רב־לשוני מה.<br>מבוקשים חרטומים כתב מה, בה ולחבר אדריכלות האנציקלופדיה בדף. של שתפו צרפתית מיוחדים צ'ט, אם תנך טיפול עיצוב, יכול איטליה תיקונים סדר גם. על סדר רביעי חינוך הגולשות, אנא על תבניות סוציולוגיה מאמרשיחהצפה, שתי את צילום מתמטיקה. תנך החול המשפט אם. אם זקוק התפתחות אחר, קרן שדרות ספינות אם. צרפתית ואמנות או זכר, דת אחרות למתחילים מלא.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

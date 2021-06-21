@@ -1,0 +1,17 @@
+/*-------------- map -----------------*/
+.map-wrap{
+	margin-top: 48px;
+
+	h2, .h2{margin-bottom: 5px;}
+}
+
+@media (max-width: 767px) {
+	.map-wrap{
+		margin-top: 15px;
+
+		&__content{
+			margin-left: -20px;
+			margin-right: -20px;
+		}
+	}
+}

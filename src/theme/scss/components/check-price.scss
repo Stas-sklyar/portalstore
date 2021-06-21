@@ -1,0 +1,71 @@
+/*-------------- check-price -----------------*/
+.check-price-list{
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -15px;
+	margin-right: -15px;
+}
+
+.check-price{
+	display: inline-flex;
+	vertical-align: top;
+	align-items: flex-start;
+	margin: 0 15px 15px;
+
+	&__label{
+		position: relative;
+		margin-bottom: 0;
+		margin-top: 5px;
+		cursor: pointer;
+	}
+
+	input[type=radio]{display: none;}
+
+	&__mark{
+		flex: 0 0 18px;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 18px;
+		height: 18px;
+		border-radius: 50%;
+		background: #fff;
+		position: relative;
+		box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.25);
+		margin-right: 10px;
+	}
+
+	&__mark::after{
+		content: '';
+		display: none;
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+		background: $color-light-brown;
+		position: absolute;
+		@include top-center;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+	}
+
+	&__text{
+		@include font(normal, normal, rem(20px), 1.2, $color-text);
+	}
+
+	&__price{
+		@include font(normal, 500, rem(22px), 1.2, $color-green);
+		margin-top: 3px;
+	}
+
+	input[type=radio]:checked + &__label &__mark::after{display: inline-block;}
+}
+
+html[dir="rtl"]{
+	.check-price{
+		&__mark{
+			margin-right: 0;
+			margin-left: 10px;
+		}
+	}
+}

@@ -1,0 +1,125 @@
+/*-------------- filter -----------------*/
+.filter-wrap{
+	padding: 10px 0;
+	border-bottom: 1px solid $color-grey;
+	margin-bottom: 36px;
+
+	&__content{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+.filter{
+	display: flex;
+
+	&__label{
+		@include font(normal, normal, rem(16px), 1.2, rgba(0,0,0,0.87));
+		margin-right: 65px;
+	}
+
+	&__list{
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__item{
+		@include font(normal, normal, rem(16px), 1.2, #000);
+		transition: all 0.2s ease 0s;
+	}
+
+	&__item.active,
+	&__item:hover{
+		color: $color-green;
+		text-decoration: underline;
+	}
+
+	&__item{
+		margin-right: 60px;
+		cursor: pointer;
+	}
+
+	&__def{display: none;}
+}
+
+html[dir="rtl"]{
+	.filter{
+		&__label,
+		&__item{
+			margin-right: 0;
+			margin-left: 60px;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.filter-wrap{margin-bottom: 20px;}
+	
+	.filter{
+		position: relative;
+
+		&__label{display: none;}
+
+		&__def{
+			display: inline-block;
+			@include font(normal, 500, rem(16px), 1.2, $color-green);
+			white-space: nowrap;
+			padding-right: 30px;
+			position: relative;
+		}
+
+		&__def::after{
+			content: '';
+			display: inline-block;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 8px 7px 0 7px;
+			border-color: $color-green transparent transparent transparent;
+			position: absolute;
+			@include top-center;
+			right: 0;
+		}
+
+		&__list{
+			display: none;
+			min-width: 150px;
+			background: #fff;
+			padding: 10px 15px;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			z-index: 2;
+		}
+
+		&__item{
+			display: block;
+			padding: 5px 0;
+			margin: 0;
+		}
+
+		&:hover &__list{display: block;}
+	}
+
+	html[dir="rtl"]{
+		.filter{
+			&__def{
+				padding-right: 0;
+				padding-left: 30px;
+			}
+
+			&__def::after{
+				right: auto;
+				left: 0;
+			}
+
+			&__list{
+				left: auto;
+				right: 0;
+			}
+
+			&__item{margin: 0;}
+		}
+	}
+}

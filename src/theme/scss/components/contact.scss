@@ -1,0 +1,58 @@
+/*-------------- contact -----------------*/
+.contact-wrap{
+	margin-top: 23px;
+	margin-bottom: 30px;
+}
+
+.contact{
+	&__top{
+		display: flex;
+		justify-content: space-between;
+		border-bottom: 2px solid $color-green;
+		margin-bottom: 24px;
+	}
+
+	&__title{
+		@include font(normal, normal, rem(24px), 1.2, $color-green);
+		margin-right: 10px;
+	}
+
+	&__icon{
+		flex: 0 0 20px;
+		margin: 0 12px;
+
+		.icon{fill: $color-green;}
+	}
+}
+
+.contact-list{
+	&__item{display: flex;}
+	&__item:not(:last-child){margin-bottom: 15px;}
+
+	&__icon{
+		display: flex;
+		justify-content: center;
+		flex: 0 0 20px;
+		padding-top: 3px;
+		margin-right: 6px;
+
+		.icon{fill: $color-green;}
+	}
+
+	&__text{
+		@include font(normal, normal, rem(18px), 1.67, $color-text);
+	}
+}
+
+html[dir="rtl"]{
+	.contact-list{
+		&__icon{
+			margin-right: 0;
+			margin-left: 6px;
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	.contact{margin-bottom: 30px;}
+}

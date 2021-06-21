@@ -1,0 +1,62 @@
+
+<main>
+  <div class="breadcrumb-wrap d-none d-md-block">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <ul class="breadcrumb">
+            <li class="breadcrumb__item"><a class="breadcrumb__link" href="/">
+              <svg class="icon ic-home" width="16" height="14">
+                <use xlink:href="assets/sprites/sprite.svg#ic-home"></use>
+              </svg>בית</a></li>
+            <li class="breadcrumb__item"><a class="breadcrumb__link" href="#">בלוג</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="filter-wrap">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="filter-wrap__content">
+            <div class="filter">
+              <div class="filter__label">מיין בלוג:</div>
+              <div class="filter__list"><a class="filter__item active" href="#">את כל</a><a class="filter__item" href="#">1 נושא</a><a class="filter__item" href="#">2 נושא</a><a class="filter__item" href="#">3 נושא</a>
+              </div>
+            </div>
+            <form class="form-search">
+              <input type="text" placeholder="לחפש">
+              <button type="submit">
+                <svg class="icon ic-search" width="18" height="18">
+                  <use xlink:href="assets/sprites/sprite.svg#ic-search"></use>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="article-list-wrap">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="article-list article-list_line" *ngFor="let i of [0,1,2,3,4,5,6,7,8,9,10,11]">
+            <app-article-list-component-v2></app-article-list-component-v2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="pager-wrap">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="pager"><a class="pager__arr" href="#"><</a><a class="pager__item" href="#">1</a><a class="pager__item" href="#">2</a><a class="pager__item current" href="#">3</a><span class="pager__more">...</span><a class="pager__item" href="#">8</a><a class="pager__item" href="#">9</a><a class="pager__arr" href="#">></a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+

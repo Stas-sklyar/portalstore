@@ -1,0 +1,47 @@
+/*-------------- breadcrumb -----------------*/
+.breadcrumb-wrap{border-bottom: 1px solid $color-grey;}
+
+.breadcrumb{
+	display: flex;
+	flex-wrap: wrap;
+
+	&,
+	&__item{
+		@include reset-list;
+	}
+
+	&__link,
+	&__item{
+		@include font(normal, normal, rem(14px), 1.45, #9e9e9e);
+		transition: all 0.2s ease 0s;
+	}
+
+	&__item{
+		padding: 5px 0 2px;
+
+		.icon{
+			fill: #9e9e9e;
+			transition: all 0.2s ease 0s;
+		}
+
+		.ic-home{margin-right: 5px;}
+	}
+
+	&__item:not(:last-child)::after{
+		content: '/';
+		margin: 0 5px;
+	}
+
+	&__item:hover .icon{fill: $color-brown;}
+}
+
+html[dir="rtl"]{
+	.breadcrumb{
+		&__item{
+			.ic-home{
+				margin-right: 0;
+				margin-left: 5px;
+			}
+		}
+	}
+}

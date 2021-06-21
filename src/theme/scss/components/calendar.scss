@@ -1,0 +1,76 @@
+/*-------------- calendar -----------------*/
+.calendar{
+	width: 100%;
+	@include font(normal, normal, rem(18px), 1, $color-text);
+	direction: ltr;
+
+	&__top{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 12px;
+	}
+
+	&__prev,
+	&__next{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 20px;
+		height: 20px;
+		cursor: pointer;
+
+		.icon{
+			fill: #bababa;
+			transition: all 0.2s ease 0s;
+		}
+	}
+
+	&__prev:hover .icon,
+	&__next:hover .icon{
+		fill: $color-brown;
+	}
+
+	&__month{
+		@include font(normal, normal, rem(20px), 1.2, $color-text);
+		margin: 0 10px;
+	}
+
+	table{
+		width: 100%;
+		text-align: center;
+	}
+
+	th{
+		@include font(normal, normal, rem(20px), 1, $color-text);
+		padding: 10px 0;
+	}
+
+	td{
+		@include font(normal, 300, rem(18px), 1, $color-text);
+	}
+
+	td span{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 34px;
+		height: 34px;
+		border-radius: 50%;
+		transition: all 0.2s ease 0s;
+		cursor: pointer;
+	}
+
+	td span:hover{background: rgba(97,144,11,0.2);}
+
+	td:nth-child(n+6),
+	.holiday{
+		color: rgb(231, 140, 92);
+	}
+
+	.today span{
+		background: $color-green;
+		color: #fff;
+		cursor: auto;
+	}
+}

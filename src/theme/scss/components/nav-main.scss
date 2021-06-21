@@ -1,0 +1,372 @@
+/*-------------- nav-main -----------------*/
+.nav-main{
+	background: $color-grey;
+
+	&__content{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 40px;
+		position: relative;
+	}
+
+	.top-menu{
+		width: calc(100% - 192px);
+		height: 100%;
+
+		& > .top-menu__item{
+			display: inline-flex;
+			align-items: center;
+			height: 100%;
+		}
+	}
+
+	&__logo{
+		font-family: $font-bn-elkana;
+		@include font(normal, normal, rem(65px), 1, #000);
+		margin-right: 15px;
+		white-space: nowrap;
+	}
+}
+
+.cat-menu{
+	height: 100%;
+
+	&__select{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		min-height: 40px;
+		width: 177px;
+		background: $color-green;
+		padding: 0 10px;
+		cursor: pointer;
+		transition: all 0.2s ease 0s;
+	}
+
+	&__icon{
+		.icon{fill: #fff;}
+		margin-right: 11px;
+	}
+
+	&__title{
+		@include font(normal, normal, rem(20px), 1.2, #fff);
+		padding-right: 22px;
+		position: relative;
+	}
+
+	&__title::after{
+		content: '';
+		display: inline-block;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 7px 7px 0 7px;
+		border-color: #ffffff transparent transparent transparent;
+		position: absolute;
+		@include top-center;
+		right: 0;
+	}
+
+	&__popup{
+		display: none;
+		width: 100%;
+		padding: 26px 55px;
+		background: #fff;
+		box-shadow: 0px 5px 10px 0px rgba(0, 0, 1, 0.1);
+		position: absolute;
+		top: 100%;
+		left: 0;
+		overflow: hidden;
+		z-index: 10;
+		transition: all 0.4s ease 0s;
+	}
+
+	&:hover &__popup{
+		display: block;
+		// width: 100%;
+		// height: auto;
+		// padding: 30px;
+	}
+
+	&__list,
+	&__sub,
+	&__item{
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+
+	&__list{
+		column-count: 5;
+		column-gap: 30px;
+	}
+
+	&__link{
+		display: inline-block;
+		vertical-align: top;
+		@include font(normal, normal, rem(20px), 1.2, #151042);
+		transition: all 0.2s ease 0s;
+		margin-bottom: 12px;
+		position: relative;
+	}
+
+	&__sub &__item,
+	&__sub &__item a{
+		font-weight: 300;
+	}
+
+	&__sub &__link::before{
+		content: '';
+		display: inline-block;
+		width: 100%;
+		height: 1px;
+		background: $color-light-brown;
+		opacity: 0;
+		margin-bottom: -4px;
+		position: absolute;
+		bottom: 100%;
+		left: 0;
+		transition: all 0.2s ease 0s;
+	}
+
+	&__link:hover{color: $color-light-brown;}
+	&__sub &__link:hover::before{opacity: 1;}
+	&__select:hover{background: $color-brown;}
+
+	&__select:hover &__title::after{
+		border-width: 0 7px 7px 7px;
+		border-color:  transparent transparent #fff transparent;
+	}
+}
+
+.top-menu{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	&,
+	&__item,
+	&__sub{
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+
+	&__item{position: relative;}
+
+	&__link{
+		@include font(normal, normal, rem(20px), 1.2, $color-dark-blue);
+		position: relative;
+		transition: all 0.2s ease 0s;
+	}
+
+	& > &__item{
+		padding: 0 25px;
+		white-space: nowrap;
+	}
+
+	& > &__item:first-child{padding-left: 0;}
+	& > &__item:last-child{padding-right: 0;}
+	
+	& > &__item:not(:last-child)::after{
+		content: '';
+		display: inline-block;
+		width: 1px;
+		height: 27px;
+		background: #dadada;
+		position: absolute;
+		@include top-center;
+		right: 0;
+	}
+
+	&__sub{
+		display: none;
+		width: 100%;
+		min-width: 165px;
+		background: #fff;
+		padding: 0 7px;
+		box-shadow: 0px 5px 10px 0px rgba(0, 0, 1, 0.1);
+		position: absolute;
+		top: 100%;
+		left: 0;
+		z-index: 10;
+	}
+
+	&__sub &__link{
+		@include font(normal, 300, rem(18px), 1.2, #151042);
+	}
+
+	&__sub &__item{padding: 6px 17px 4px;}
+	&__sub &__item:not(:last-child){border-bottom: 1px solid #e7e7e7;}
+
+	&__sub &__link:hover{color: $color-brown;}
+
+	&__sub &__link::before{
+		content: '';
+		display: inline-block;
+		width: 100%;
+		height: 1px;
+		background: $color-light-brown;
+		opacity: 0;
+		margin-bottom: -3px;
+		position: absolute;
+		bottom: 100%;
+		left: 0;
+		transition: all 0.2s ease 0s;
+	}
+
+	&__sub &__link:hover::before{opacity: 1;}
+
+	&__item:hover &__sub{display: inline-block;}
+}
+
+.nav-main_big{
+	.top-menu{
+		width: auto;
+
+		&__link{font-size: rem(17px);}
+	}
+
+	.cat-menu{
+		&__icon,
+		&__title::after{
+			display: none;
+		}
+
+		&__title{
+			padding: 0;
+			font-size: rem(17px);
+			color: $color-dark-blue;
+		}
+
+		&__select{
+			width: auto;
+			background: transparent;
+			padding: 0 17px;
+			position: relative;
+		}
+
+		&__select::after{
+			content: '';
+			display: inline-block;
+			width: 1px;
+			height: 27px;
+			background: #dadada;
+			position: absolute;
+			@include top-center;
+			right: 0;
+		}
+	}
+
+	.nav-main__content{height: auto;}
+
+	.top-menu > .top-menu__item{padding: 0 15px;}
+	.top-menu > .top-menu__item:first-child{padding-right: 15px;}
+
+	.header-basket{
+		padding-left: 8px;
+		padding-right: 8px;
+	}
+}
+
+html[dir="rtl"]{
+	.nav-main{
+		&__logo{
+			margin-right: 0;
+			margin-left: 15px;
+		}
+	}
+
+	.cat-menu{
+		&__icon{
+			margin-right: 0;
+			margin-left: 11px;
+		}
+
+		&__title{
+			padding-right: 0;
+			padding-left: 22px;
+		}
+
+		&__title::after{
+			right: auto;
+			left: 0;
+		}
+
+		&__popup{
+			left: auto;
+			right: 0;
+		}
+	}
+
+	.top-menu{
+		& > .top-menu__item:not(:last-child)::after{
+			right: auto;
+			left: 0;
+		}
+
+		& > .top-menu__item:first-child{
+			padding-right: 0;
+			padding-left: 25px;
+		}
+
+		& > .top-menu__item:last-child{
+			padding-left: 0;
+			padding-right: 25px;
+		}
+	}
+
+	.nav-main_big{
+		.cat-menu{
+			&__title{padding: 0;}
+
+			&__select::after{
+				right: auto;
+				left: 0;
+			}
+		}
+
+		.top-menu > .top-menu__item:first-child{
+			padding-right: 15px;
+			padding-left: 15px;
+		}
+
+		.top-menu > .top-menu__item:last-child{padding-right: 15px;}
+	}
+}
+
+@media (max-width: 1229px) {
+	.top-menu{
+		&__link{font-size: rem(16px);}
+	}
+
+	.nav-main{
+		.top-menu{width: auto;}
+	}
+
+	.nav-main_big{
+		.top-menu{
+			padding: 10px 0;
+			overflow-x: auto;
+		}
+
+		.header-basket{min-width: 150px;}
+	}
+
+	.cat-menu{
+		&__select{width: auto;}
+
+		&__link,
+		&__title{
+			font-size: rem(16px);
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	.cat-menu{
+		&__list{column-count: 3;}
+	}
+}

@@ -1,0 +1,113 @@
+/*-------------- catalog-detail -----------------*/
+.catalog-detail{
+	margin: 25px 0 40px;
+
+	&__content{padding-left: 30px;}
+	
+	&__top{padding-bottom: 10px;}
+	&__title{margin-bottom: 0;}
+
+	&__text{
+		@include font(normal, 300, rem(20px), 1.2, $color-text);
+	}
+
+	&__action{
+		padding: 20px 0 15px;
+		border-top: 1px solid #bebebe;
+	}
+
+	&__btn{
+		margin-top: 15px;
+
+		.btn{
+			min-width: 215px;
+			margin-bottom: 10px;
+		}
+
+		.btn_small{min-width: 150px;}
+		.btn:not(:last-child){margin-right: 15px;}
+	}
+
+	&__contact{
+		padding: 20px 0;
+		border-top: 1px solid #bebebe;
+		@include font(normal, 300, rem(20px), 1.2, $color-text);
+	}
+
+	&__phone{
+		font-weight: normal;
+		color: $color-green;
+
+		.icon{
+			fill: $color-green;
+			margin-right: 7px;
+			line-height: rem(24px);
+			vertical-align: top;
+			margin-top: 4px;
+		}
+	}
+
+	&__img-wrap{text-align: center;}
+
+	&__label{
+		@include font(normal, 300, rem(12px), 1.2, $color-text);
+		margin-top: 10px;
+	}
+}
+
+html[dir="rtl"]{
+	.catalog-detail{
+		&__content{
+			padding-left: 0;
+			padding-right: 30px;
+		}
+
+		&__btn{
+			.btn:not(:last-child){
+				margin-right: 0;
+				margin-left: 15px;
+			}
+		}
+
+		&__phone{
+			.icon{
+				margin-right: 0;
+				margin-left: 7px;
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.catalog-detail{
+		&__img-wrap{margin-bottom: 10px;}
+		&__top{text-align: center;}
+		&__title{font-size: rem(32px);}
+
+		&__content{
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+		&__action{border-top: 0;}
+
+		&__phone-text{
+			display: block;
+			padding-left: 24px;
+		}
+	}
+
+	html[dir="rtl"]{
+		.catalog-detail{
+			&__content{
+				padding-left: 0;
+				padding-right: 0;
+			}
+
+			&__phone-text{
+				padding-left: 0;
+				padding-right: 24px;
+			}
+		}
+	}
+}

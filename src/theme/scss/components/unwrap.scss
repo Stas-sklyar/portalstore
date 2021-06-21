@@ -1,0 +1,130 @@
+/*-------------- unwrap -----------------*/
+.unwrap{
+	&__head{
+		display: flex;
+		padding: 5px 0;
+		margin-bottom: 17px;
+	}
+
+	&__arr{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 40px;
+		cursor: pointer;
+
+		.icon{
+			fill: $color-green;
+			transition: all 0.3s ease 0s;
+		}
+	}
+
+	&__title{
+		max-width: calc(100% - 40px);
+		@include font(normal, normal, rem(30px), 1.2, $color-green);
+		position: relative;
+	}
+
+	&__title::after{
+		content: '';
+		display: inline-block;
+		width: 100%;
+		height: 2px;
+		background: $color-green;
+		position: absolute;
+		bottom: -5px;
+		left: 0;
+	}
+
+	&__content{
+		display: none;
+		@include font(normal, 300, rem(16px), 1.25, $color-text);
+		letter-spacing: 0.07px;
+
+		p:last-child{margin-bottom: 0;}
+	}
+
+	&.opened &__content{display: block;}
+	&.opened &__arr .icon{transform: rotate(180deg);}
+
+	&_line &__title::after{display: none;}
+
+	&_line &__head{
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: space-between;
+		position: relative;
+		border-bottom: 2px solid $color-green;
+	}
+
+	&_math &__title::after{display: none;}
+}
+
+.unwrap-last{
+	padding-top: 53px;
+	margin-bottom: -50px;
+	position: relative;
+	z-index: 2;
+}
+
+@media (max-width: 767px) {
+	.unwrap{
+		&__head{
+			position: relative;
+			margin-bottom: 9px;
+		}
+
+		&__title{
+			font-size: rem(20px);
+			padding-left: 24px;
+		}
+
+		&__title::after{height: 1px;}
+
+		&__content{
+			font-size: rem(14px);
+			line-height: 1.2;
+		}
+
+		&__arr{
+			height: 34px;
+			width: 15px;
+			position: absolute;
+			top: 0;
+			left: 0;
+
+			.ic-arrow-down{
+				width: 14px;
+				height: 8px;
+			}
+
+			.ic-plus,
+			.ic-minus{
+				width: 19px;
+			}
+		}
+
+		&_line &__arr{position: static;}
+		&_line &__title{padding: 0;}
+
+	}
+	
+	.unwrap-wrap + .map-wrap{margin-top: 30px;}
+	.unwrap-last{padding-top: 23px;}
+
+	html[dir="rtl"]{
+		.unwrap{
+			&__title{
+				padding-left: 0;
+				padding-right: 24px;
+			}
+
+			&__arr{
+				left: auto;
+				right: 0;
+			}
+
+			&_line .unwrap__title{padding: 0;}
+		}
+	}
+}

@@ -1,0 +1,37 @@
+//Path
+$path-img: "../../img";
+$path-fonts: "../../fonts";
+
+//Font
+$font-site: 'Rubik', Arial, sans-serif;
+$font-yakov: 'Yakov', Arial, sans-serif;
+$font-bn-markmor: 'BN Markmor', Arial, sans-serif;
+$font-koby: 'Koby', Arial, sans-serif;
+$font-bn-elkana: 'BN Elkana', Arial, sans-serif;
+$font-choco: 'Choco', Arial, sans-serif;
+
+// Site
+$color-text: #000;
+$color-dark-blue: #1b1e22;
+$color-green: #61900b;
+$color-brown: #8c7503;
+$color-light-brown: #9b830c;
+$color-red: #a62103;
+$color-dark-red: #911d03;
+$color-grey: #ebebeb;
+
+// Grid
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1230px
+) !default;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1170px
+) !default;

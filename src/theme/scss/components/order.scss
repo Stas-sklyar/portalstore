@@ -1,0 +1,82 @@
+/*-------------- order -----------------*/
+.order-page{
+	margin-top: 30px;
+	margin-bottom: 30px;
+
+	&__top{
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 30px;
+
+		h1, .h1{margin-bottom: 0;}
+	}
+
+	&__btn{
+		margin-left: 15px;
+
+		.btn{
+			min-width: 150px;
+			margin-top: 5px;
+			margin-bottom: 5px;
+		}
+
+		.btn:not(:last-child){margin-right: 15px;}
+	}
+}
+
+.order-btn{
+	display: flex;
+	align-items: flex-end;
+	flex-direction: column;
+	margin-top: 30px;
+
+	&__label{
+		@include font(normal, 300, rem(12px), 1.2, $color-text);
+		margin-top: 10px;
+	}
+}
+
+html[dir="rtl"]{
+	.order-page{
+		&__btn{
+			margin-left: 0;
+			margin-right: 15px;
+	
+			.btn:not(:last-child){
+				margin-right: 0;
+				margin-left: 15px;
+			}
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	.order-page{
+		.basket-list-wrap{margin-top: 40px;}
+	}
+}
+
+@media (max-width: 767px) {
+	.order-page{
+		&__top{display: block;}
+		&__btn{margin: 15px 0 0;}
+	}
+
+	.order-btn{
+		display: block;
+		text-align: center;
+		
+		.btn{
+			display: block;
+			width: 100%;
+			max-width: 300px;
+			margin: 30px auto 0;
+		}
+	}
+		
+	html[dir="rtl"]{
+		.order-page{
+			&__btn{margin: 15px 0 0;}
+		}
+	}
+}

@@ -1,0 +1,53 @@
+/*-------------- input-radio -----------------*/
+.input-radio{
+	display: inline-block;
+	vertical-align: top;
+
+	&__label{
+		display: inline-flex;
+		align-items: center;
+		cursor: pointer;
+		position: relative;
+	}
+
+	input[type=radio] {display: none;}
+
+	&__mark{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		flex: 0 0 18px;
+		width: 18px;
+		height: 18px;
+		border-radius: 50%;
+		position: relative;
+		box-shadow: inset 1px 0px 2px 0px rgba(0,0,0,0.35);
+	}
+
+	&__mark::after{
+		content: '';
+		display: none;
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+		background: $color-green;
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		@include top-center;
+	}
+
+	&__text{
+		@include font(normal, normal, rem(20px), 1.2, $color-text);
+		margin-left: 10px;
+	}
+
+	input[type=radio]:checked + &__label &__mark::after{display: inline-block;}
+}
+
+html[dir="rtl"]{
+	.input-radio{
+		&__label{flex-direction: row-reverse;}
+	}
+}

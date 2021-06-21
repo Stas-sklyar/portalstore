@@ -1,0 +1,57 @@
+@import "utils/vars";
+
+// bootstrap
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/utilities/flex";
+@import "~bootstrap/scss/utilities/display";
+@import "~bootstrap/scss/grid";
+// @import "~bootstrap/scss/modal";
+
+@import "~sass-rem/_rem.scss";
+
+// All
+// @import "utils/libs";
+@import "utils/mixins";
+@import "utils/fonts";
+@import "utils/reset";
+
+//swiper
+@import "~swiper/swiper-bundle.min.css";
+
+@import "layouts/footer.scss";
+@import "layouts/header.scss";
+@import "layouts/main.scss";
+
+@import "components/about.scss";
+@import "components/advant.scss";
+@import "components/article-detail.scss";
+@import "components/article-list.scss";
+@import "components/basket.scss";
+@import "components/breadcrumb.scss";
+@import "components/calendar.scss";
+@import "components/catalog-detail.scss";
+@import "components/catalog.scss";
+@import "components/check-price.scss";
+@import "components/contact.scss";
+@import "components/counter.scss";
+@import "components/delivery-line.scss";
+@import "components/filter.scss";
+@import "components/form-search.scss";
+@import "components/form-site.scss";
+@import "components/goods.scss";
+@import "components/icons.scss";
+@import "components/input-check.scss";
+@import "components/input-radio.scss";
+@import "components/map.scss";
+@import "components/nav-main.scss";
+@import "components/offer-slider.scss";
+@import "components/order.scss";
+@import "components/pager.scss";
+@import "components/radio-btn.scss";
+@import "components/tooltip.scss";
+@import "components/top-slider.scss";
+@import "components/type-icon.scss";
+@import "components/unwrap.scss";
+@import "components/view.scss";

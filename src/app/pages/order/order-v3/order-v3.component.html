@@ -1,0 +1,64 @@
+<main>
+  <app-breadcrumb></app-breadcrumb>
+
+  <section class="order-page">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-12">
+          <div class="order-page__top">
+            <h1>מזמין</h1>
+          </div>
+        </div>
+      </div>
+
+      <form>
+        <div class="row">
+
+          <div class="col-lg-7">
+            <div class="form-site">
+
+              <app-order-v3-info-about-client></app-order-v3-info-about-client>
+
+              <app-order-v3-details-event></app-order-v3-details-event>
+
+              <app-order-v3-details-delivery></app-order-v3-details-delivery>
+
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <div class="basket-list-wrap basket-list-wrap_small basket-list-wrap_shadow">
+
+              <app-basket-head></app-basket-head>
+
+              <div class="basket-list">
+                <app-basket-item></app-basket-item>
+                <app-basket-item></app-basket-item>
+                <app-basket-item></app-basket-item>
+              </div>
+
+              <div class="basket-bottom basket-bottom_big">
+                <div class="basket-bottom__label">סך כל התשלום:</div>
+                <div class="basket-bottom__price">₪405</div>
+              </div>
+              <!-- <app-basket-total-price class="basket-bottom_big"></app-basket-total-price> 
+              здесь можно использовать эту компоненту но стили для label немного отличаются -->
+
+              <app-basket-delivery></app-basket-delivery>
+
+              <div class="form-site">
+                <app-payment-method></app-payment-method>
+              </div>
+
+              <app-accept-agreement></app-accept-agreement>
+
+            </div>
+          </div>
+
+        </div>
+      </form>
+    </div>
+
+  </section>
+</main>

@@ -1,0 +1,50 @@
+/*-------------- input-check -----------------*/
+.input-check{
+	display: inline-block;
+	vertical-align: top;
+	
+	&__label{
+		display: inline-flex;
+		align-items: center;
+		cursor: pointer;
+		position: relative;
+	}
+
+	input[type=checkbox] {display: none;}
+
+	&__mark{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		flex: 0 0 16px;
+		width: 16px;
+		height: 16px;
+		border: 1px solid #dadada;
+		position: relative;
+
+		.icon{
+			display: none;
+			fill: $color-green;
+		}
+	}
+
+	&__text{
+		@include font(normal, normal, rem(20px), 1.2, $color-text);
+		margin-left: 10px;
+	}
+
+	input[type=checkbox]:checked + &__label &__mark .icon{
+		display: inline-block;
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		@include top-center;
+	}
+}
+
+html[dir="rtl"]{
+	.input-check{
+		&__label{flex-direction: row-reverse;}
+	}
+}

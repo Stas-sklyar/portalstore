@@ -1,0 +1,54 @@
+<main>
+
+  <app-breadcrumb></app-breadcrumb>
+
+  <section class="order-page">
+    <div class="container">
+
+      <app-inviting></app-inviting>
+
+      <form>
+        <div class="row">
+          <div class="col-12">
+            <div class="basket-unwrap active">
+
+              <div class="basket-unwrap__head">
+                <div class="basket-unwrap__info">
+                  <div class="basket-unwrap__num">1</div>
+                  <div class="basket-unwrap__title">ההזמנה שלך</div>
+                </div>
+                <div class="basket-unwrap__icon">
+                  <svg class="icon ic-order" width="21" height="20">
+                    <use xlink:href="#ic-order"></use>
+                  </svg>
+                </div>
+              </div>
+              <!-- <app-basket-head></app-basket-head> 
+                выше можно было использовать эту компоненту, но разметка немного разная -->
+
+              <div class="basket-unwrap__content">
+                <div class="basket-list">
+                  <app-basket-item></app-basket-item>
+                  <app-basket-item></app-basket-item>
+                  <app-basket-item></app-basket-item>
+                </div>
+
+                <app-basket-total-price></app-basket-total-price>
+
+              </div>
+
+            </div>
+
+            <app-basket-spoiler></app-basket-spoiler>
+            <app-basket-spoiler></app-basket-spoiler>
+            <app-basket-spoiler></app-basket-spoiler>
+            <!-- вот здесь точно не знаю, можно ли это сделать одной компонентой,
+               так как в пропсы нужно как-то передать разные компоненты -->
+
+          </div>
+        </div>
+      </form>
+
+    </div>
+  </section>
+</main>

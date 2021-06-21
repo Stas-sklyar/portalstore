@@ -1,0 +1,517 @@
+/*-------------- basket -----------------*/
+.basket-wrap{
+	margin-top: 25px;
+
+	h1, .h1{margin-bottom: 31px;}
+}
+
+.basket-table{
+	width: 100%;
+
+	th{
+		@include font(normal, normal, rem(20px), 1.2, $color-green);
+		padding: 5px 10px;
+		border-bottom: 2px solid $color-green;
+
+		.icon{fill: $color-green;}
+	}
+
+	td{
+		padding: 26px 10px;
+		vertical-align: middle;
+	}
+
+	tr:not(:last-child) td{border-bottom: 1px solid #eee;}
+
+	&__info{
+		display: flex;
+		align-items: center;
+	}
+
+	&__del{
+		@include font(normal, 300, rem(12px), 1.2, #9e9e9e);
+		text-align: center;
+
+		.icon{
+			fill: #9e9e9e;
+			margin-bottom: 3px;
+		}
+	}
+
+	&__img{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		flex: 0 0 64px;
+		width: 64px;
+		height: 64px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+		margin: 0 12px;
+	}
+
+	&__name{
+		@include font(normal, 500, rem(20px), 1.2, $color-green);
+	}
+
+	&__desc{
+		@include font(normal, 300, rem(16px), 1.2, $color-text);
+	}
+
+	&__price{
+		width: 150px;
+		@include font(normal, 500, rem(22px), 1, $color-green);
+		text-align: center;
+	}
+
+	td.basket-table__price,
+	td.basket-table__counter,
+	th.basket-table_center,
+	td.basket-table_center{
+		text-align: center;
+	}
+
+	&__counter{
+		width: 125px;
+		text-align: center;
+	}
+
+	&__buy{width: 36px;}
+}
+
+.basket-more{
+	display: inline-flex;
+	align-items: center;
+	@include font(normal, normal, rem(20px), 1.2, #a9a9a9);
+	margin-top: 10px;
+	transition: all 0.2s ease 0s;
+
+	&__icon{
+		flex: 0 0 16px;
+		margin-left: 10px;
+
+		.icon{
+			fill: #a9a9a9;
+			transition: all 0.2s ease 0s;
+		}
+	}
+
+	&:hover{color: $color-brown;}
+	&:hover .icon{fill: $color-brown;}
+}
+
+.basket-table-wrap{
+	margin-bottom: 78px;
+
+	&_big{
+		margin-bottom: 57px;
+
+		.basket-table{
+			th{font-size: rem(24px);}
+			td{padding: 17px 10px;}
+	
+			&__img{
+				flex: 0 0 52px;
+				width: 52px;
+				height: 52px;
+			}
+		}
+	}
+
+	&_small{
+		.basket-table{
+			td{padding: 32px 10px;}
+	
+			&__img{
+				flex: 0 0 52px;
+				width: 52px;
+				height: 52px;
+			}
+
+			&__price{width: 100px;}
+		}
+	}
+}
+
+.basket-head{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 7px 8px;
+	border-bottom: 2px solid $color-green;
+
+	&__title{
+		@include font(normal, normal, rem(23px), 1.2, $color-green);
+	}
+
+	&__icon{
+		.icon{fill: $color-green;}
+	}
+}
+
+.basket-total{
+	&__top{
+		display: flex;
+		justify-content: space-between;
+		padding: 4px 5px 5px;
+		border-bottom: 2px solid $color-green;
+	}
+
+	&__title{
+		@include font(normal, normal, rem(20px), 1.2, $color-green);
+	}
+
+	&__icon{
+		.icon{fill: $color-green;}
+	}
+
+	&__content{padding: 23px 12px;}
+
+	&__btn{
+		display: flex;
+		justify-content: space-between;
+		margin-top: 18px;
+
+		.btn{
+			min-width: 0;
+			width: calc(50% - 8px);
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+	}
+
+	&_shadow{
+		border-radius: 3px;
+		box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+		padding: 20px;
+		margin-top: 7px;
+
+		.basket-total__title{font-size: rem(24px);}
+
+		.basket-total__btn{
+			margin-top: 4px;
+			
+			.btn,
+			.btn_small{
+				width: calc(50% - 5px);
+				height: 45px;
+				line-height: rem(41px);
+				font-size: rem(20px);
+			}
+		}
+
+		.basket-total-about{display: flex;}
+		.basket-total-about__title{margin-right: 15px;}
+		.basket-total-about__text{padding-top: 4px;}
+		.basket-total-res{font-size: rem(24px);}
+	}
+}
+
+.basket-total-item{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	@include font(normal, normal, rem(20px), 1.2, $color-text);
+
+	&__price{padding-left: 10px;}
+}
+
+.basket-total-about{
+	margin-top: 18px;
+
+	&__title{
+		@include font(normal, normal, rem(20px), 1.2, $color-text);
+	}
+
+	&__text{
+		@include font(normal, 300, rem(16px), 1.2, $color-text);
+	}
+}
+
+.basket-total-res{
+	display: flex;
+	justify-content: space-between;
+	border-top: 2px solid $color-green;
+	@include font(normal, normal, rem(20px), 1.2, $color-green);
+	padding: 22px 12px;
+
+	&__price{font-weight: 500;}
+}
+
+.basket-list{
+	&__item{
+		padding: 15px 0;
+		border-bottom: 1px solid #eee;
+	}
+
+	&__info{
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+	}
+
+	&__del{
+		flex: 0 0 45px;
+		@include font(normal, 300, rem(12px), 1.2, #9e9e9e);
+		text-align: center;
+
+		.icon{
+			fill: #9e9e9e;
+			margin-bottom: 3px;
+		}
+	}
+
+	&__img{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		flex: 0 0 64px;
+		width: 64px;
+		height: 64px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+		margin: 0 12px;
+	}
+
+	&__name{
+		@include font(normal, 500, rem(20px), 1.2, $color-green);
+	}
+
+	&__desc{
+		@include font(normal, 300, rem(16px), 1.2, $color-text);
+	}
+
+	&__bottom{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-top: 20px;
+	}
+
+	&__price{
+		@include font(normal, 500, rem(22px), 1, $color-green);
+		text-align: center;
+		margin-left: 15px;
+	}
+
+	&__counter{
+		display: flex;
+		align-items: center;
+	}
+
+	&__counter-label{
+		@include font(normal, normal, rem(11px), 1.2, #9e9e9e);
+		white-space: nowrap;
+		margin-right: 10px;
+	}
+}
+
+.basket-bottom{
+	display: flex;
+	justify-content: space-between;
+	border-top: 2px solid $color-green;
+	@include font(normal, normal, rem(20px), 1.2, $color-green);
+	padding: 22px 12px;
+
+	&__price{font-weight: 500;}
+
+	&_big{
+		font-size: rem(24px);
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	&_big &__price{font-size: rem(30px);}
+}
+
+.basket-unwrap{
+	margin-bottom: 25px;
+
+	&__head{
+		display: flex;
+		justify-content: space-between;
+		border-bottom: 2px solid $color-green;
+		margin-bottom: 13px;
+		padding-bottom: 6px;
+	}
+
+	&__info{display: flex;}
+
+	&__num{
+		display: inline-block;
+		@include font(normal, 500, rem(18px), 1.2, #fff);
+		background: $color-green;
+		padding: 5px 10px;
+		margin-right: 10px;
+	}
+
+	&__title{
+		@include font(normal, normal, rem(24px), 1.2, $color-green);
+		margin-right: 10px;
+	}
+
+	&__icon{
+		flex: 0 0 20px;
+		margin: 0 12px;
+
+		.icon{fill: $color-green;}
+	}
+
+	&__content{display: none;}
+	&.active &__content{display: block;}
+}
+
+.basket-list-wrap{
+	&_shadow{
+		padding: 15px 15px 30px;
+		background: #fff;
+		box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+	}
+}
+
+.basket-delivery{
+	margin-bottom: 30px;
+
+	&__title{
+		@include font(normal, normal, rem(24px), 1.2, $color-green);
+		margin-bottom: 5px;
+	}
+
+	&__text{
+		@include font(normal, 300, rem(18px), 1.2, $color-text);
+	}
+}
+
+
+html[dir="rtl"]{
+	.basket-more{
+		&__icon{
+			margin-left: 0;
+			margin-right: 10px;
+		}
+	}
+
+	.basket-total{
+		&_shadow{
+			.basket-total-about__title{
+				margin-right: 0;
+				margin-left: 27px;
+			}
+		}
+	}
+
+	.basket-total-item{
+		&__price{
+			padding-left: 0;
+			padding-right: 10px;
+		}
+	}
+
+	.basket-list{
+		&__price{
+			margin-left: 0;
+			margin-right: 15px;
+		}
+
+		&__counter-label{
+			margin-right: 0;
+			margin-left: 10px;
+		}
+	}
+
+	.basket-unwrap{
+		&__num,
+		&__title{
+			margin-right: 0;
+			margin-left: 10px;
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	.basket-table-wrap{
+		&_big{
+			.basket-table{
+				th{font-size: rem(20px);}
+			}
+		}
+
+		&_small{
+			.basket-table{
+				&__price{width: 150px;}
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.basket-table{
+		&,
+		thead,
+		tbody{
+			display: block;
+		}
+
+		tr{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+
+		th{
+			display: none;
+			border-bottom: none;
+		}
+
+		td{padding: 15px 5px;}
+
+		th:first-child,
+		th:last-child{
+			display: block;
+		}
+
+		tr:not(:last-child) td{border-bottom: none;}
+		tr:not(:last-child){border-bottom: 1px solid #eee;}
+
+		&__head{
+			justify-content: space-between;
+			border-bottom: 2px solid $color-green;
+		}
+
+		&__main{width: 100%;}
+		&__price{width: auto;}
+		&__buy{display: none;}
+	}
+
+	.basket-more{margin-top: 20px;}
+
+	.basket-table-wrap{
+		margin-bottom: 30px;
+
+		&_small .basket-table__price{width: auto;}
+	}
+
+	.basket-head{
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.basket-total{
+		&_shadow{
+			padding: 20px 14px;
+
+			.basket-total__btn .btn,
+			.basket-total__btn .btn_small{
+				font-size: rem(18px);
+			}
+		}
+
+		.btn_radius,
+		button.btn_radius,
+		input[type="submit"].btn_radius{
+			font-size: rem(18px);
+		}
+	}
+}

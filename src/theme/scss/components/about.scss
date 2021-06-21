@@ -1,0 +1,60 @@
+/*-------------- about -----------------*/
+.about{
+	&__content{
+		display: flex;
+		padding: 5px 0 8px;
+	}
+
+	&__title{
+		display: flex;
+		align-items: center;
+		@include font(normal, normal, rem(30px), 1.2, $color-green);
+		padding-right: 10px;
+		border-right: 2px solid $color-green;
+		margin-right: 15px;
+	}
+
+	&__text{
+		@include font(normal, 300, rem(16px), 1.2, $color-text);
+	}
+
+	&_col{margin-bottom: 8px;}
+
+	&_col &__content{
+		display: block;
+		padding: 0 17px;
+	}
+
+	&_col &__title{
+		padding-right: 0;
+		margin-right: 0;
+		margin-bottom: 7px;
+		border: 0;
+	}
+}
+
+html[dir="rtl"]{
+	.about{
+		&__title{
+			padding-right: 0;
+			padding-left: 10px;
+			border-right: 0;
+			border-left: 2px solid $color-green;
+			margin-right: 0;
+			margin-left: 15px;
+		}
+
+
+		&_col .about__title{
+			padding-left: 0;
+			margin-left: 0;
+			border: 0;
+		}
+	}
+}
+
+@media (max-width: 1229px) {
+	.about{
+		&__title{min-width: 180px;}
+	}
+}

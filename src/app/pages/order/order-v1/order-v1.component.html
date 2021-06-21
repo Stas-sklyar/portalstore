@@ -1,0 +1,50 @@
+<main>
+  <app-breadcrumb></app-breadcrumb>
+
+  <section class="order-page">
+    <div class="container">
+
+      <app-inviting></app-inviting>
+
+      <form>
+        <div class="row">
+          <div class="col-lg-7">
+            <div class="form-site">
+
+              <app-order-delivery-method></app-order-delivery-method>
+
+              <app-order-info-about-client></app-order-info-about-client>
+
+              <app-payment-method></app-payment-method>
+
+              <div class="form-site__btn d-none d-md-flex">
+                <a class="btn btn_small" href="#">לבדוק</a>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-5">
+            <div class="basket-list-wrap basket-list-wrap_small">
+
+              <app-basket-head></app-basket-head>
+
+              <div class="basket-list">
+                <app-basket-item></app-basket-item>
+                <app-basket-item></app-basket-item>
+                <app-basket-item></app-basket-item>
+              </div>
+
+              <app-basket-total-price></app-basket-total-price>
+
+            </div>
+
+            <app-check-order></app-check-order>
+          </div>
+        </div>
+      </form>
+
+    </div>
+  </section>
+</main>

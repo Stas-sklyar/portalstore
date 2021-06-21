@@ -1,0 +1,88 @@
+/*-------------- form-search -----------------*/
+.form-search{
+	display: inline-flex;
+	height: rem(35px);
+	width: 244px;
+	position: relative;
+	padding-right: 44px;
+
+	input[type="text"]{
+		display: inline-block;
+		height: 100%;
+		width: 100%;
+		@include font(normal, normal, rem(16px), rem(34px), #000);
+		padding: 0;
+		margin: 0;
+		border: 0;
+		border-bottom: 1px solid transparent;
+		outline: 0;
+		background: transparent;
+		transition: all 0.2s ease 0s;
+	}
+
+	input[type="text"]::placeholder{color: rgba(0,0,0,0.4); opacity: 1;}
+	input[type="text"]::-webkit-input-placeholder {color: rgba(0,0,0,0.4); opacity: 1;}
+	input[type="text"]:-moz-placeholder {color: rgba(0,0,0,0.4); opacity: 1;}
+
+	input[type="text"]:focus{border-color: $color-green;}
+
+	input[type="submit"],
+	button{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 35px;
+		height: 35px;
+		background: $color-green;
+		font-size: 0;
+		border: 0;
+		outline: 0;
+		padding: 0;
+		border-radius: 50%;
+		box-shadow: 0px 2px 13px 0px rgba(0, 0, 0, 0.12);
+		cursor: pointer;
+		transition: all 0.2s ease 0s;
+		position: absolute;
+		@include top-center;
+		right: 0;
+	}
+
+	button .icon{fill: #fff;}
+	
+	input[type="submit"]:hover,
+	button:hover{
+		background: $color-brown;
+	}
+}
+
+html[dir="rtl"]{
+	.form-search{
+		padding-right: 0;
+		padding-left: 44px;
+
+		input[type="submit"],
+		button{
+			right: auto;
+			left: 0;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.form-search{
+		input[type="text"]{text-align: right;}
+	}
+
+	html[dir="rtl"]{
+		.form-search{
+			input[type="text"]{text-align: left;}
+		}
+	}
+}
+
+@media (max-width: 479px) {
+	.form-search{
+		width: auto;
+		max-width: 50%;
+	}
+}

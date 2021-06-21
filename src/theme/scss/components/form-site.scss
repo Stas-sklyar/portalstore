@@ -1,0 +1,439 @@
+/*-------------- form-site -----------------*/
+.form-site{
+	&__top{
+		display: flex;
+		justify-content: space-between;
+		border-bottom: 2px solid $color-green;
+		margin-bottom: 13px;
+		padding-bottom: 6px;
+	}
+
+	&__top:not(:first-child){margin-top: 40px;}
+
+	&__title{
+		@include font(normal, normal, rem(24px), 1.2, $color-green);
+		margin-right: 10px;
+	}
+
+	&__icon{
+		flex: 0 0 20px;
+		margin: 0 12px;
+
+		.icon{fill: $color-green;}
+	}
+
+	&__l-icon{
+		flex: 0 0 20px;
+		margin-right: 10px;
+
+		.icon{fill: $color-green;}
+	}
+
+	&__text{
+		@include font(normal, 300, rem(12px), 1.2, $color-text);
+		margin-bottom: 10px;
+	}
+
+	&__item{
+		display: flex;
+		align-items: center;
+		margin-bottom: 12px;
+	}
+
+	&__item-wrap{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	&__item-col-3{
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: -10px;
+		margin-right: -10px;
+	}
+
+	&__item-wrap &__item{width: calc(50% - 10px)}
+
+	&__item-col-3 &__item{
+		width: calc(33.33% - 10px);
+		nav-left: 10px;
+		margin-right: 10px;
+	}
+
+	&__label{
+		@include font(normal, normal, rem(20px), 1.2, $color-text);
+		white-space: nowrap;
+		margin-right: 10px;
+	}
+
+	&__field{
+		width: 100%;
+
+		.input-check{margin: 10px 10px 10px 0;}
+		.input-radio{margin: 10px 10px 10px 0;}
+	}
+
+	&__item_col{display: block;}
+	&__item_col &__label{margin: 0 0 5px;}
+
+	input[type="text"],
+	input[type="email"],
+	input[type="password"],
+	input[type="tel"],
+	textarea{
+		height: 35px;
+		width: 100%;
+		outline: none;
+		border: none;
+		border-bottom: 1px solid #dadada;
+		font-family: $font-site;
+		@include font(normal, 300, rem(16px), rem(33px), $color-dark-blue);
+		padding: 0 5px;
+		margin: 0;
+		background: transparent;
+		box-shadow: none;
+		transition: all 0.3s ease 0s;
+	}
+
+	input[type="text"]:focus,
+	input[type="email"]:focus,
+	input[type="password"]:focus,
+	input[type="tel"]:focus,
+	textarea:focus{
+		box-shadow: none;
+		background: #c6faff;
+	}
+
+	textarea{
+		height: 114px;
+		line-height: 1.2;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+	&__btn{
+		display: flex;
+		justify-content: flex-end;
+		margin-top: 20px;
+
+		.btn{min-width: 150px;}
+	}
+}
+
+.input-date{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+
+	&__icon{
+		display: inline-flex;
+		justify-content: center;
+		flex: 0 0 24px;
+		margin-right: 10px;
+
+		.icon{fill: $color-green;}
+	}
+
+	&__label{
+		@include font(normal, normal, rem(20px), 1.2, $color-text);
+		margin-right: 10px;
+	}
+
+	&__field{margin-right: 10px;}
+
+	input[type="text"],
+	input[type="date"],
+	input[type="time"]{
+		height: 35px;
+		width: 145px;
+		outline: none;
+		border: none;
+		border-bottom: 1px solid #dadada;
+		font-family: $font-site;
+		@include font(normal, 300, rem(20px), rem(33px), $color-dark-blue);
+		text-align: center;
+		padding: 0 5px;
+		margin: 0;
+		background: transparent;
+		box-shadow: none;
+		transition: all 0.3s ease 0s;
+	}
+
+	input[type="text"]:focus,
+	input[type="date"]:focus,
+	input[type="time"]:focus{
+		box-shadow: none;
+		background: #c6faff;
+	}
+}
+
+.input-date-btn{
+	position: relative;
+	&__icon{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 34px;
+		height: 34px;
+		border-radius: 50%;
+		background: $color-green;
+		transition: all 0.2s ease 0s;
+		cursor: pointer;
+
+		.icon{fill: #fff;}
+	}
+
+	&__icon:hover{background: $color-brown;}
+}
+
+.date-popup{
+	display: none;
+	min-width: 305px;
+	padding: 15px;
+	background: #fff;
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+	margin-top: 5px;
+	position: absolute;
+	top: 100%;
+	left: -17px;
+	z-index: 10;
+
+	&::after{
+		content: '';
+		display: inline-block;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 0 10px 14px 10px;
+		border-color: transparent transparent #ffffff transparent;
+		position: absolute;
+		bottom: 100%;
+		left: 23px;
+	}
+
+	&.active{display: block;}
+
+	&__title{
+		@include font(normal, 500, rem(20px), 1.2, $color-text);
+		margin-bottom: 10px;
+		padding: 0 10px;
+	}
+
+	&__msg{
+		@include font(normal, normal, rem(14px), 1.15, $color-red);
+		border-top: 2px solid $color-red;
+		border-bottom: 2px solid $color-red;
+		padding: 7px 10px;
+		margin: 10px 0;
+	}
+
+	&__btn{
+		margin-top: 10px;
+
+		.btn{width: 100%;}
+	}
+
+	&__calendar{margin-top: 17px;}
+
+	.tooltip{
+		white-space: nowrap;
+		position: absolute;
+		bottom: 100%;
+		left: 60px;
+		margin-bottom: 14px;
+	}
+}
+
+.form-city{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	width: 100%;
+
+	&__icon{
+		display: inline-flex;
+		justify-content: center;
+		flex: 0 0 24px;
+		margin-right: 10px;
+
+		.icon{fill: $color-green;}
+	}
+
+	&__label{
+		@include font(normal, normal, rem(20px), 1.2, $color-text);
+		margin-right: 10px;
+	}
+
+	&__field{margin-right: 10px;}
+
+	input[type="text"]{
+		height: 35px;
+		width: 100%;
+		outline: none;
+		border: none;
+		border-bottom: 1px solid #dadada;
+		font-family: $font-site;
+		@include font(normal, 300, 16px, rem(33px), $color-dark-blue);
+		padding: 0 5px;
+		margin: 0;
+		background: transparent;
+		box-shadow: none;
+		transition: all 0.3s ease 0s;
+	}
+
+	input[type="text"]:focus{
+		box-shadow: none;
+		background: #c6faff;
+	}
+
+	.choose{margin-left: 10px;}
+
+	&__note{
+		@include font(normal, normal, rem(20px), 1.2, $color-text);
+		margin: 7px 0;
+	}
+
+	&__price{
+		font-weight: 500;
+		color: $color-green;
+		margin: 0 10px;
+	}
+}
+
+.choose{
+	min-width: 200px;
+	position: relative;
+
+	&__def{
+		height: 35px;
+		width: 100%;
+		border-bottom: 1px solid #dadada;
+		@include font(normal, 300, rem(20px), rem(33px), $color-dark-blue);
+		text-align: center;
+		padding: 0 30px 0 5px;
+		position: relative;
+		cursor: pointer;
+	}
+
+	&__def::after{
+		content: '';
+		display: inline-block;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 7px 7px 0 7px;
+		border-color: $color-green transparent transparent transparent;
+		position: absolute;
+		@include top-center;
+		right: 5px;
+	}
+
+	&__list{
+		display: none;
+		width: 100%;
+		background: #fff;
+		border-radius: 5px;
+		box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+		position: absolute;
+		top: 100%;
+		left: 0;
+		z-index: 10;
+	}
+
+	&.active &__list{display: inline-block;}
+
+	&__option{
+		@include font(normal, 300, rem(17px), 1.2, $color-dark-blue);
+		padding: 5px 10px;
+		border-bottom: 1px solid #ddd;
+		transition: all 0.2s ease 0s;
+		cursor: pointer;
+	}
+
+	&__option:hover{color: $color-brown;}
+}
+
+html[dir="rtl"]{
+	.form-site{
+		&__title{
+			margin-right: 0;
+			margin-left: 10px;
+		}
+
+		&__label{
+			margin-right: 0;
+			margin-left: 10px;
+		}
+
+		&__l-icon{
+			margin-right: 0;
+			margin-left: 10px;
+		}
+
+		&__field{
+			.input-check,
+			.input-radio{
+				margin-right: 0;
+				margin-left: 10px;
+			}
+		}
+	}
+
+	.input-date{
+		&__icon,
+		&__label,
+		&__field{
+			margin-right: 0;
+			margin-left: 10px;
+		}
+	}
+
+	.date-popup{
+		left: auto;
+		right: -17px;
+
+		&::after{
+			left: auto;
+			right: 23px;
+		}
+
+		.tooltip{
+			left: auto;
+			right: 60px;
+		}
+	}
+
+	.form-city{
+		&__icon,
+		&__label,
+		&__field,
+		.choose{
+			margin-right: 0;
+			margin-left: 10px;
+		}
+	}
+
+	.choose{
+		&__def{
+			padding-left: 30px;
+			padding-right: 5px;
+		}
+
+		&__def::after{
+			right: auto;
+			left: 5px;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.form-site{
+		&__item-wrap &__item,
+		&__item-col-3 &__item{
+			width: 100%;
+		}
+
+		&__btn{justify-content: center;}
+	}
+}

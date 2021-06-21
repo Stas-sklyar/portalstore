@@ -1,0 +1,29 @@
+/*-------------- view -----------------*/
+.view{
+	display: flex;
+	flex-wrap: wrap;
+
+	&__item{
+		margin-left: 27px;
+		cursor: pointer;
+
+		.icon{
+			fill: #9e9e9e;
+			transition: all 0.2s ease 0s;
+		}
+	}
+
+	&__item:hover .icon,
+	&__item.active .icon{
+		fill: $color-green;
+	}
+}
+
+html[dir="rtl"]{
+	.view{
+		&__item{
+			margin-left: 0;
+			margin-right: 27px;
+		}
+	}
+}

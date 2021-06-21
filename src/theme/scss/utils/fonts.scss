@@ -1,0 +1,122 @@
+/* Rubik */
+@font-face {
+	font-family: 'Rubik';
+	src: url('#{$path-fonts}/rubik/Rubik-Bold.eot');
+	src: url('#{$path-fonts}/rubik/Rubik-Bold.eot?#iefix') format('embedded-opentype'),
+		url('#{$path-fonts}/rubik/Rubik-Bold.woff2') format('woff2'),
+		url('#{$path-fonts}/rubik/Rubik-Bold.woff') format('woff'),
+		url('#{$path-fonts}/rubik/Rubik-Bold.ttf') format('truetype');
+	// 	url('#{$path-fonts}/rubik/Rubik-Bold.svg#Rubik-Bold') format('svg');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Rubik';
+	src: url('#{$path-fonts}/rubik/Rubik-Regular.eot');
+	src: url('#{$path-fonts}/rubik/Rubik-Regular.eot?#iefix') format('embedded-opentype'),
+		url('#{$path-fonts}/rubik/Rubik-Regular.woff2') format('woff2'),
+		url('#{$path-fonts}/rubik/Rubik-Regular.woff') format('woff'),
+		url('#{$path-fonts}/rubik/Rubik-Regular.ttf') format('truetype');
+		// url('#{$path-fonts}/rubik/Rubik-Regular.svg#Rubik-Regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Rubik';
+	src: url('#{$path-fonts}/rubik/Rubik-Light.eot');
+	src: url('#{$path-fonts}/rubik/Rubik-Light.eot?#iefix') format('embedded-opentype'),
+		url('#{$path-fonts}/rubik/Rubik-Light.woff2') format('woff2'),
+		url('#{$path-fonts}/rubik/Rubik-Light.woff') format('woff'),
+		url('#{$path-fonts}/rubik/Rubik-Light.ttf') format('truetype');
+		// url('#{$path-fonts}/rubik/Rubik-Light.svg#Rubik-Light') format('svg');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Rubik';
+	src: url('#{$path-fonts}/rubik/Rubik-Medium.eot');
+	src: url('#{$path-fonts}/rubik/Rubik-Medium.eot?#iefix') format('embedded-opentype'),
+		url('#{$path-fonts}/rubik/Rubik-Medium.woff2') format('woff2'),
+		url('#{$path-fonts}/rubik/Rubik-Medium.woff') format('woff'),
+		url('#{$path-fonts}/rubik/Rubik-Medium.ttf') format('truetype');
+		// url('#{$path-fonts}/rubik/Rubik-Medium.svg#Rubik-Medium') format('svg');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* Yakov */
+@font-face {
+	font-family: 'Yakov';
+	src: url('#{$path-fonts}/Yakov/Yakov.eot');
+	src: url('#{$path-fonts}/Yakov/Yakov.eot?#iefix') format('embedded-opentype'),
+		url('#{$path-fonts}/Yakov/Yakov.woff2') format('woff2'),
+		url('#{$path-fonts}/Yakov/Yakov.woff') format('woff'),
+		url('#{$path-fonts}/Yakov/Yakov.ttf') format('truetype');
+		/* url('#{$path-fonts}/Yakov/Yakov.svg#Yakov') format('svg'); */
+	font-weight: 100;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* BN Markmor */
+@font-face {
+	font-family: 'BN Markmor';
+	src: url('#{$path-fonts}/bn-markmor/BNMarkmor.eot');
+	src: url('#{$path-fonts}/bn-markmor/BNMarkmor.eot?#iefix') format('embedded-opentype'),
+		url('#{$path-fonts}/bn-markmor/BNMarkmor.woff2') format('woff2'),
+		url('#{$path-fonts}/bn-markmor/BNMarkmor.woff') format('woff'),
+		url('#{$path-fonts}/bn-markmor/BNMarkmor.ttf') format('truetype');
+		// url('#{$path-fonts}/bn-markmor/BNMarkmor.svg#BNMarkmor') format('svg');
+	font-weight: 100;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* Koby */
+@font-face {
+	font-family: 'Koby';
+	src: url('#{$path-fonts}/Koby/Koby.eot');
+	src: url('#{$path-fonts}/Koby/Koby.eot?#iefix') format('embedded-opentype'),
+		url('#{$path-fonts}/Koby/Koby.woff2') format('woff2'),
+		url('#{$path-fonts}/Koby/Koby.woff') format('woff'),
+		url('#{$path-fonts}/Koby/Koby.ttf') format('truetype');
+		// url('#{$path-fonts}/Koby/Koby.svg#Koby') format('svg');
+	font-weight: 100;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* BN Elkana */
+@font-face {
+	font-family: 'BN Elkana';
+	src: url('#{$path-fonts}/bn-elkana/BNElkana.eot');
+	src: url('#{$path-fonts}/bn-elkana/BNElkana.eot?#iefix') format('embedded-opentype'),
+		url('#{$path-fonts}/bn-elkana/BNElkana.woff2') format('woff2'),
+		url('#{$path-fonts}/bn-elkana/BNElkana.woff') format('woff'),
+		url('#{$path-fonts}/bn-elkana/BNElkana.ttf') format('truetype');
+		// url('#{$path-fonts}/bn-elkana/BNElkana.svg#BNElkana') format('svg');
+	font-weight: 100;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* Choco */
+@font-face {
+	font-family: 'Choco';
+	src:url('#{$path-fonts}/Choco/Choco.eot');
+	src:url('#{$path-fonts}/Choco/Choco.eot?#iefix') format('embedded-opentype'),
+		url('#{$path-fonts}/Choco/Choco.woff2') format('woff2'),
+		url('#{$path-fonts}/Choco/Choco.woff') format('woff'),
+		url('#{$path-fonts}/Choco/Choco.ttf') format('truetype');
+		// url('Choco.svg#Choco') format('svg');
+	font-weight: 100;
+	font-style: normal;
+	font-display: swap;
+}
